@@ -45,6 +45,8 @@ pipeline {
 steps{
 sh "docker rmi $samplewebapp:$BUILD_NUMBER"
 sh "docker rmi $samplewebapp:latest"
+}
+	 }
      
       stage('Run Docker container on Jenkins Agent') {
              
