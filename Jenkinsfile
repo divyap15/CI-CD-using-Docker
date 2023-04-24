@@ -13,6 +13,7 @@ pipeline {
              
           }
         }
+ }
 	 stage('Execute Maven') {
            steps {
              
@@ -48,7 +49,6 @@ pipeline {
             steps 
 			{
                 sh "docker run -d -p 8003:8080 mohanaarush/samplewebapp"
- 
             }
         }
  }
