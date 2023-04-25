@@ -8,7 +8,11 @@
     
     <style>
         
-        body { font-family: "Noto Sans Kannada", sans-serif; font-size: 19.0px; line-height: 1.11em; }
+        body { 
+            font-family: "Noto Sans Kannada", sans-serif; 
+            font-size: 19.0px; 
+            line-height: 1.11em;
+        }
         body{
     
     background-repeat: no-repeat;
@@ -168,7 +172,7 @@ span.psw {
         <tr>
             <td><img src="https://aniportalimages.s3.amazonaws.com/media/details/BMTC_July21.jpg" align="left" width="250" height="200"></td>
             <td >
-           <div id="name" >
+           <div id="name">
             <h1>
                 ಬೆಂಗಳೂರು ಮಹಾನಗರ ಸಾರಿಗೆ ಸಂಸ್ಥೆ
             </h1>
