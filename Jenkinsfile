@@ -43,6 +43,20 @@ pipeline {
           }
         }
 	 
+	 stage('remove containers')
+	 {
+		 steps
+		 {
+			 sh 'docker stop $(docker ps -aq)'
+			 sh 'docker rm $(docker ps -aq)'
+			 sh 'docker ps --filter status=running'
+			 sh 'docker stop $(docker ps --filter status=running -q)'
+			 sh 'docker rm $(docker ps --filter status=exited -q)'
+			 sh 'docker container prune'
+			 sh 'docker rmi $(docker images -q)'
+		 }
+	 }
+			
 	
       stage('Run Docker container on Jenkins Agent') {
              
