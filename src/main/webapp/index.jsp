@@ -110,7 +110,7 @@ button:hover {
   top: 65%;
   left:70%;
   height: 85%;
-  width:29%;
+  width:35%;
 
 }
 form {
@@ -214,35 +214,7 @@ span.psw {
         <form method="post" action="login.jsp">
           
  <div id="login2">
-        <td>
-           <div id="name1" >
-            <h4>
-                ಬೆಂಗಳೂರು ಮಹಾನಗರ ಸಾರಿಗೆ ಸಂಸ್ಥೆ
-            </h4>
-            </div>
-            </td>
-            <tr>
-                <td>
-                    <div id="name2">
-                    <h4>
-                        BANGALORE METROPOLITON TRANSPORT CORPORATION
-                    </h4>
-                    </div>
-                </td>
-            </tr>
-            
-            
-            <tr>
-                <td>
-                    <div id="photo1">
-                    <img src="http://ems.mybmtc.com/BMTC/images/logo2.png" height="100" width="100" >
-                    </div>
-                </td>
-            </tr>
-            <br>
-            <br>
-            <br>
-            <br><br><br>
+
             
   <div class="container">
       <tr>
