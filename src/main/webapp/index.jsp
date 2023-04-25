@@ -23,7 +23,7 @@
   position:absolute;
   color:blue;
   font-size: x-large;
-  left:35%;
+  left:25%;
 }
 #photo{
   position: absolute;
