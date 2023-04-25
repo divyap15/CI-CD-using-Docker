@@ -42,7 +42,7 @@
 }
 #photo1{
   position:absolute;
-  top:58%;
+  top:18%;
   left: 36%;
 }
 #name2{
