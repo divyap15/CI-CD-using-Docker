@@ -27,7 +27,7 @@
 #name{
   position:absolute;
   color:blue;
-  font-size: x-large;
+  font-size: large;
   left:25%;
 }
 #photo{
@@ -183,16 +183,17 @@ span.psw {
             </td>
             </tr>
             </table>
+        <table>
          <tr>
-    <td><blockquote><a href="" target="call">HOME</a></blockquote>
+                <td><blockquote><a href="" target="call">HOME</a></blockquote></td>
     
-    <blockquote><a href="" target="call">ADMIN</a></blockquote></td>
+                <td><blockquote><a href="" target="call">ADMIN</a></blockquote></td>
     
-    <td><blockquote><a href="sign.html" target="call">SIGN IN</a></blockquote></td>
+                <td><blockquote><a href="sign.html" target="call">SIGN IN</a></blockquote></td>
 
-     <td><blockquote><a href="login.html" target="call">STUDENT LOGIN</a></blockquote></td>
+                <td><blockquote><a href="login.html" target="call">STUDENT LOGIN</a></blockquote></td>
    
-    <td><blockquote><a href="" target="call">CONTACT US</a></blockquote></td>
+                <td><blockquote><a href="" target="call">CONTACT US</a></blockquote></td>
         </tr>
     </table>
     <hr>
