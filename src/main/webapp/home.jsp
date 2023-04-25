@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../project/1.css">
+    <title>BMTC</title>
+    
     <style>
-        @import url(http://fonts.googleapis.com/earlyaccess/notosanskannada.css);
+       
         body { font-family: "Noto Sans Kannada", sans-serif; font-size: 19.0px; line-height: 1.11em; }
         </style>
 </head>
