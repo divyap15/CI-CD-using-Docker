@@ -185,7 +185,7 @@ span.psw {
     
                 <td><blockquote><a href="index.jsp" target="call">SIGN IN</a></blockquote></td>
 
-                <td><blockquote><a href="login.html" target="call">STUDENT LOGIN</a></blockquote></td>
+                <td><blockquote><a href="studentlogin.jsp" target="call">STUDENT LOGIN</a></blockquote></td>
    
                 <td><blockquote><a href="" target="call">CONTACT US</a></blockquote></td>
         </tr>
