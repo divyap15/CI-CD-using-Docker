@@ -33,7 +33,7 @@
 #photo{
   position: absolute;
   top: 0%;
-  left:83.5%
+  left:73.5%;
 }
 #name1{
   color:blue;
