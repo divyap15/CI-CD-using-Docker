@@ -238,11 +238,6 @@ span.psw {
           <td colspan="2">New User <a href="register.jsp">Register Here</a></td>
        </tr>
   </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn1">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
 </form>
         </body>
 </html>
