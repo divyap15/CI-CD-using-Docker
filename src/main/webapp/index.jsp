@@ -206,7 +206,7 @@ span.psw {
         </marquee>
         </tr>
         </table>
-    <img src="https://www.indiaspend.com/h-upload/old_images/343409-bmtc-1.jpg" width="100%" height="0%">
+    /*<img src="https://www.indiaspend.com/h-upload/old_images/343409-bmtc-1.jpg" width="100%" height="0%">*/
 </body>
 </html>
         <form method="post" action="login.jsp">
