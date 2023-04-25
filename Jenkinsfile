@@ -42,7 +42,7 @@ pipeline {
                   
           }
         }
-	 
+	 /*
 	 stage('remove containers')
 	 {
 		 steps
@@ -56,6 +56,7 @@ pipeline {
 			 sh 'docker rmi $(docker images -q)'
 		 }
 	 }
+	 */
 			
 	
       stage('Run Docker container on Jenkins Agent') {
