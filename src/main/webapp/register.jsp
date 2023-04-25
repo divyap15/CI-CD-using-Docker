@@ -8,7 +8,7 @@
     <body bgcolor="silver">
         <form method="post" action="userRegistration.jsp">
             <center>
-            <table border="1" width="30%" cellpadding="5">
+            <table  width="30%" cellpadding="5">
                 <thead>
                     <div id="name1" >
                         <tr>
