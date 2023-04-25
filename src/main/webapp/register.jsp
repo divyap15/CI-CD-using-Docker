@@ -11,12 +11,15 @@
             <table border="1" width="30%" cellpadding="5">
                 <thead>
                     <div id="name1" >
+                        <tr>
             <h4>
                 <th colspan="2">
                 ಬೆಂಗಳೂರು ಮಹಾನಗರ ಸಾರಿಗೆ ಸಂಸ್ಥೆ
                 </th>
             </h4>
             </div>
+                    </tr>
+                <tr>
                     <div id="name2">
                     <h4>
                         <th colspan="2">
@@ -24,12 +27,16 @@
                         </th>
                     </h4>
                     </div>
+                </tr>
+                <tr>
                
                     <div id="photo1">
                         <th colspan="2">
                     <img src="http://ems.mybmtc.com/BMTC/images/logo2.png" height="100" width="100" >
                         </th>
                     </div>
+                </tr>
+                <tr>
                         <th colspan="2">Enter Information Here</th>
                     </tr>
                 </thead>
