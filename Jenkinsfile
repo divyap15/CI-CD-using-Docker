@@ -50,7 +50,7 @@ pipeline {
                 sh "docker run -d -p 8003:8080 mohanaarush/samplewebapp"
             }
         }
-	 
+	 /*
 	  stage('remove images')
 	 {
 		 steps
@@ -59,6 +59,7 @@ pipeline {
 			 sh 'docker rmi $(docker images -q)'
 		 }
 	 }
+	 */
 	
  }
 }
