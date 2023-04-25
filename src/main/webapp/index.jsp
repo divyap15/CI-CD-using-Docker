@@ -42,7 +42,7 @@
 }
 #photo1{
   position:absolute;
-  top:18%;
+  top:58%;
   left: 36%;
 }
 #name2{
@@ -206,7 +206,7 @@ span.psw {
         </marquee>
         </tr>
         </table>
-    /*<img src="https://www.indiaspend.com/h-upload/old_images/343409-bmtc-1.jpg" width="100%" height="0%">*/
+    
 </body>
 </html>
         <form method="post" action="login.jsp">
@@ -230,13 +230,23 @@ span.psw {
           <td><label for="psw"><b>Password</b></label></td>
           <td><input type="password" placeholder="Enter Password" name="psw" required></td>
       </tr>
-    <tr>
-         <td><input type="submit" value="Login" /></td>
-         <td><input type="reset" value="Reset" /></td>
-     </tr>
+      <tr>
+          <td><button type="submit">Login</button></td>
+          <td><button type="reset">Reset</button></td>
+      </tr>
       <tr>
           <td colspan="2">New User <a href="register.jsp">Register Here</a></td>
        </tr>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn1">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+  
   </div>
 </form>
         </body>
