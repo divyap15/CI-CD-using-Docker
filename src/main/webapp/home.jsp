@@ -33,7 +33,7 @@
 #photo{
   position: absolute;
   top: 0%;
-  left:73.5%;
+  left:75%;
 }
 #name1{
   color:blue;
@@ -180,11 +180,10 @@ span.psw {
             </table>
         <table>
          <tr>
-                <td><blockquote><a href="" target="call">HOME</a></blockquote></td>
-    
+               
                 <td><blockquote><a href="" target="call">ADMIN</a></blockquote></td>
     
-                <td><blockquote><a href="sign.html" target="call">SIGN IN</a></blockquote></td>
+                <td><blockquote><a href="index.jsp" target="call">SIGN IN</a></blockquote></td>
 
                 <td><blockquote><a href="login.html" target="call">STUDENT LOGIN</a></blockquote></td>
    
