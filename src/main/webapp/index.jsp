@@ -107,8 +107,8 @@ button:hover {
 #login2{
   position:absolute;
   background-color: aliceblue;
-  top: 55%;
-  left:60%;
+  top: 40%;
+  left:65%;
   height: 85%;
   width:35%;
 
