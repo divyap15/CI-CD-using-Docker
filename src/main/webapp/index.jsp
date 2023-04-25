@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Example</title>
     </head>
-    <body bgcolor="orange">
+    <body >
     <table>
         <tr>
             <td><img src="https://aniportalimages.s3.amazonaws.com/media/details/BMTC_July21.jpg" align="left" width="250" height="200"></td>
@@ -23,6 +23,31 @@
             </td>
             </tr>
             </table>
+         <tr>
+    <td><blockquote><a href="" target="call">HOME</a></blockquote></td>
+    
+    <td><blockquote><a href="" target="call">ADMIN</a></blockquote></td>
+    
+    <td><blockquote><a href="sign.html" target="call">SIGN IN</a></blockquote></td>
+
+     <td><blockquote><a href="login.html" target="call">STUDENT LOGIN</a></blockquote></td>
+   
+    <td><blockquote><a href="" target="call">CONTACT US</a></blockquote></td>
+        </tr>
+    </table>
+    <hr>
+        <table>
+        <tr>   
+    <marquee >
+     <h1>
+        WELCOME TO BANGALORE METROPOLITON TRANSPORT CORPORATION
+    </h1>
+        </marquee>
+        </tr>
+        </table>
+    <img src="https://www.indiaspend.com/h-upload/old_images/343409-bmtc-1.jpg" width="100%" height="0%">
+</body>
+</html>
         <form method="post" action="login.jsp">
             <center>
             <table border="0" width="30%" cellpadding="3">
