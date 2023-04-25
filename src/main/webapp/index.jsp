@@ -210,6 +210,38 @@ span.psw {
 </body>
 </html>
         <form method="post" action="login.jsp">
+            <img src="https://m.economictimes.com/thumb/msid-63197880,width-1200,height-900,resizemode-4,imgsize-80774/bmtc-agencies.jpg" width="100%">
+
+            <div id="login2">
+        <td>
+           <div id="name1" >
+            <h4>
+                ಬೆಂಗಳೂರು ಮಹಾನಗರ ಸಾರಿಗೆ ಸಂಸ್ಥೆ
+            </h4>
+            </div>
+            </td>
+            <tr>
+                <td>
+                    <div id="name2">
+                    <h4>
+                        BANGALORE METROPOLITON TRANSPORT CORPORATION
+                    </h4>
+                    </div>
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td>
+                    <div id="photo1">
+                    <img src="http://ems.mybmtc.com/BMTC/images/logo2.png" height="100" width="100" >
+                    </div>
+                </td>
+            </tr>
+            <br>
+            <br>
+            <br>
+            <br><br><br>
              <tr>
                 <td>
                     <div id="photo1">
