@@ -5,6 +5,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Example</title>
         <style>
+            body { 
+                font-family: "Noto Sans Kannada", sans-serif; 
+                font-size: 19.0px; 
+                line-height: 1.11em;
+            }
             body{
     
     background-repeat: no-repeat;
