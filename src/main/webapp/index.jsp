@@ -237,9 +237,7 @@ span.psw {
       <tr>
           <td colspan="2">New User <a href="register.jsp">Register Here</a></td>
        </tr>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+    
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
@@ -247,7 +245,7 @@ span.psw {
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
   
-  </div>
+  
 </form>
         </body>
 </html>
