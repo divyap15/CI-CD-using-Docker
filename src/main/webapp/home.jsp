@@ -1,19 +1,16 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMTC</title>
-    
-    <style>
-        
-        body { 
-            font-family: "Noto Sans Kannada", sans-serif; 
-            font-size: 19.0px; 
-            line-height: 1.11em;
-        }
-        body{
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Example</title>
+        <style>
+            body { 
+                font-family: "Noto Sans Kannada", sans-serif; 
+                font-size: 19.0px; 
+                line-height: 1.11em;
+            }
+            body{
     
     background-repeat: no-repeat;
     background-size:cover;
@@ -30,13 +27,13 @@
 #name{
   position:absolute;
   color:blue;
-  font-size: x-large;
-  left:35%;
+  font-size: large;
+  left:25%;
 }
 #photo{
   position: absolute;
   top: 0%;
-  left:83.5%
+  left:73.5%;
 }
 #name1{
   color:blue;
@@ -55,7 +52,6 @@ left:25%;
 top:48%;;
 }
 * {box-sizing: border-box}
-
 /* Full-width input fields */
   input[type=text], input[type=password] {
   width: 100%;
@@ -65,12 +61,10 @@ top:48%;;
   border: none;
   background: #f1f1f1;
 }
-
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
-
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
@@ -114,7 +108,6 @@ button:hover {
   left:70%;
   height: 85%;
   width:29%;
-
 }
 form {
   border: 3px solid #f1f1f1;
@@ -148,7 +141,6 @@ button:hover {
   text-align: center;
   margin: 24px 0 12px 0;
 }
-
 .container {
   padding: 16px;
 }
@@ -166,13 +158,14 @@ span.psw {
   }
 }
         </style>
-</head>
-<body>
+        
+    </head>
+    <body >
     <table>
         <tr>
             <td><img src="https://aniportalimages.s3.amazonaws.com/media/details/BMTC_July21.jpg" align="left" width="250" height="200"></td>
             <td >
-           <div id="name">
+           <div id="name" >
             <h1>
                 ಬೆಂಗಳೂರು ಮಹಾನಗರ ಸಾರಿಗೆ ಸಂಸ್ಥೆ
             </h1>
@@ -185,17 +178,17 @@ span.psw {
             </td>
             </tr>
             </table>
-            <table>
-    <tr>
-    <td><blockquote><a href="" target="call">HOME</a></blockquote></td>
+        <table>
+         <tr>
+                <td><blockquote><a href="" target="call">HOME</a></blockquote></td>
     
-    <td><blockquote><a href="" target="call">ADMIN</a></blockquote></td>
+                <td><blockquote><a href="" target="call">ADMIN</a></blockquote></td>
     
-    <td><blockquote><a href="sign.html" target="call">SIGN IN</a></blockquote></td>
+                <td><blockquote><a href="sign.html" target="call">SIGN IN</a></blockquote></td>
 
-     <td><blockquote><a href="login.html" target="call">STUDENT LOGIN</a></blockquote></td>
+                <td><blockquote><a href="login.html" target="call">STUDENT LOGIN</a></blockquote></td>
    
-    <td><blockquote><a href="" target="call">CONTACT US</a></blockquote></td>
+                <td><blockquote><a href="" target="call">CONTACT US</a></blockquote></td>
         </tr>
     </table>
     <hr>
