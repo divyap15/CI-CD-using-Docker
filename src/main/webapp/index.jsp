@@ -6,6 +6,23 @@
         <title>JSP Example</title>
     </head>
     <body bgcolor="orange">
+    <table>
+        <tr>
+            <td><img src="https://aniportalimages.s3.amazonaws.com/media/details/BMTC_July21.jpg" align="left" width="250" height="200"></td>
+            <td >
+           <div id="name" >
+            <h1>
+                ಬೆಂಗಳೂರು ಮಹಾನಗರ ಸಾರಿಗೆ ಸಂಸ್ಥೆ
+            </h1>
+            </div>
+            </td>
+            <td>
+            <div id="photo">
+            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-52b1i4kphdmf74vvej48fr59v7-20180718043535.Medi.jpeg" width="300" height="205">
+            </div>
+            </td>
+            </tr>
+            </table>
         <form method="post" action="login.jsp">
             <center>
             <table border="0" width="30%" cellpadding="3">
