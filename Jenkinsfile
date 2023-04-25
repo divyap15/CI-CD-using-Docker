@@ -42,6 +42,10 @@ pipeline {
                   
           }
         }
+	 
+	 stage('Remove Unused docker image') {
+	sh "docker rmi $dockerImage:$BUILD_NUMBER"
+	sh "docker rmi $mohanaarush/samplewebapp:latest"
 	
       stage('Run Docker container on Jenkins Agent') {
              
