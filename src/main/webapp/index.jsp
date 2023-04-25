@@ -209,9 +209,10 @@ span.psw {
     
 </body>
 </html>
-<table>
+
+  <img src="https://m.economictimes.com/thumb/msid-63197880,width-1200,height-900,resizemode-4,imgsize-80774/bmtc-agencies.jpg" width="100%">
         <form method="post" action="login.jsp">
-            <img src="https://m.economictimes.com/thumb/msid-63197880,width-1200,height-900,resizemode-4,imgsize-80774/bmtc-agencies.jpg" width="100%">
+          
 
             
   <div class="container">
