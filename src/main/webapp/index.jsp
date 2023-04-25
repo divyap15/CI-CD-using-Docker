@@ -184,9 +184,9 @@ span.psw {
             </tr>
             </table>
          <tr>
-    <td><blockquote><a href="" target="call">HOME</a></blockquote></td>
+    <td><blockquote><a href="" target="call">HOME</a></blockquote>
     
-    <td><blockquote><a href="" target="call">ADMIN</a></blockquote></td>
+    <blockquote><a href="" target="call">ADMIN</a></blockquote></td>
     
     <td><blockquote><a href="sign.html" target="call">SIGN IN</a></blockquote></td>
 
