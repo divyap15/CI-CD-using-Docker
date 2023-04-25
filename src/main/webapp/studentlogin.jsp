@@ -18,7 +18,7 @@
 }
 #login1{
   position:absolute;
-  background-color: aliceblue;
+  
   top: 35%;
   left:70%;
   height: 85%;
