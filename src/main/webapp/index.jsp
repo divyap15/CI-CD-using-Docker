@@ -33,7 +33,7 @@
 #photo{
   position: absolute;
   top: 0%;
-  left:73.5%;
+  left:77%;
 }
 #name1{
   color:blue;
@@ -210,32 +210,39 @@ span.psw {
 </body>
 </html>
         <form method="post" action="login.jsp">
-            <center>
-            <table border="0" width="30%" cellpadding="3">
-                <thead>
-                    <tr>
-                        <th colspan="2">Login Page</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Username</td>
-                        <td><input type="text" name="userName" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="password" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="Login" /></td>
-                        <td><input type="reset" value="Reset" /></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">New User <a href="register.jsp">Register Here</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            </center>
-        </form>
+             <tr>
+                <td>
+                    <div id="photo1">
+                    <img src="http://ems.mybmtc.com/BMTC/images/logo2.png" height="100" width="100" >
+                    </div>
+                </td>
+            </tr>
+            <br>
+            <br>
+            <br>
+            <br><br><br>
+  <div class="container">
+      <tr>
+          <td><label for="uname"><b>Username</b></label></td>
+          <td><input type="text" placeholder="Enter Username" name="uname" required></td>
+      </tr>
+      <tr>
+          <td><label for="psw"><b>Password</b></label></td>
+          <td><input type="password" placeholder="Enter Password" name="psw" required></td>
+      </tr>
+    <tr>
+         <td><input type="submit" value="Login" /></td>
+         <td><input type="reset" value="Reset" /></td>
+     </tr>
+      <tr>
+          <td colspan="2">New User <a href="register.jsp">Register Here</a></td>
+       </tr>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn1">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
         </body>
 </html>
