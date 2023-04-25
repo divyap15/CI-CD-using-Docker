@@ -10,6 +10,31 @@
             <center>
             <table border="1" width="30%" cellpadding="5">
                 <thead>
+                    <div id="name1" >
+            <h4>
+                ಬೆಂಗಳೂರು ಮಹಾನಗರ ಸಾರಿಗೆ ಸಂಸ್ಥೆ
+            </h4>
+            </div>
+            </td>
+            <tr>
+                <td>
+                    <div id="name2">
+                    <h4>
+                        BANGALORE METROPOLITON TRANSPORT CORPORATION
+                    </h4>
+                    </div>
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td>
+                    <div id="photo1">
+                    <img src="http://ems.mybmtc.com/BMTC/images/logo2.png" height="100" width="100" >
+                    </div>
+                </td>
+            </tr>
+            <br>
                     <tr>
                         <th colspan="2">Enter Information Here</th>
                     </tr>
