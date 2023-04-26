@@ -12,9 +12,9 @@ pipeline {
 			steps{
 				sh """
 		  docker ps -a \
-		    | awk '{ print \$1,\$2 }' \
+		     
 		    | grep mohanaarush/samplewebapp* \
-		    | awk '{print \$1 }' \
+		    
 		    | xargs -I {} docker rm -f {}
 			  """
 			}
