@@ -10,13 +10,16 @@ pipeline {
 	stages {
 		stage('Remove Unused docker image') {
 			      steps{
-				sh 'docker stop $(docker ps | grep ":8003" | awk '{print $1}')'
-				sh 'docker rm $(docker ps | grep ":8003" | awk '{print $1}')'      
-
-
+				      script{
+					      if docker ps -a | grep "mohanaarush/samplewebapp*" | awk '{print $1}' | xargs docker rm -f; then 
+					      printf 'cleared\n'
+					      else
+						      print 'error\n'
+					      fi
+				      }
 			      }
 			    }
-      stage('checkout') {
+ stage('checkout') {
            steps {
              
                 git branch: 'master', url: 'https://github.com/Aarushmohan/CI-CD-using-Docker.git'
