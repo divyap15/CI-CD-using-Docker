@@ -5,7 +5,10 @@ pipeline {
     {
        maven "maven"
     }
-	stage('Remove Unused docker image') {
+	
+
+	stages {
+		stage('Remove Unused docker image') {
 			      steps{
 				sh 'docker stop $(docker ps | grep ":8003" | awk '{print $1}')'
 				sh 'docker rm $(docker ps | grep ":8003" | awk '{print $1}')'      
@@ -13,8 +16,6 @@ pipeline {
 
 			      }
 			    }
-
-	stages {
       stage('checkout') {
            steps {
              
