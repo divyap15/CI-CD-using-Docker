@@ -52,12 +52,12 @@ pipeline {
                   
           }
         }
-	/*stage('Remove Unused docker image') {
+	stage('Remove Unused docker image') {
 			      steps{
-				sh "docker rmi $samplewebapp:$BUILD_NUMBER"
+				sh "docker rmi $mohanaarush/samplewebapp:$BUILD_NUMBER"
 			      }
 			    }
-	 */
+	 
 	 
 	 
 	
