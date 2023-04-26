@@ -23,13 +23,13 @@ pipeline {
           }
         }
 
-	 stage('Remove Unused docker image') {
+	 /*stage('Remove Unused docker image') {
 		 steps{
-		 sh 'docker ps -f name=mohanaarush/samplewebapp -q | xargs --no-run-if-empty docker container stop'
-                 sh 'docker container ls -a -fname=mohanaarush/samplewebapp -q | xargs -r docker container rm'
+		sh ' docker stop mohanaarush/samplewebapp:latest'
+			 sh ' docker rmi mohanaarush/
 	
 	 }
-	 }
+	 }*/
     
 
   stage('Docker Build and Tag') {
