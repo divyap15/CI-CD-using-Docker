@@ -14,6 +14,7 @@ pipeline {
              
           }
         }
+		
  
 	stage('Execute Maven') {
            steps {
@@ -21,6 +22,14 @@ pipeline {
                 sh 'mvn package'             
           }
         }
+
+	stage('Remove Unused docker image') {
+		 steps{
+	sh 'docker stop mohanaarush/samplewebapp:latest'
+	sh 'docker rmi mohanaarush/samplewebapp:latest'		 
+	
+	 }
+	 }
         
 
   stage('Docker Build and Tag') {
@@ -44,13 +53,7 @@ pipeline {
           }
         }
 	 
-	 stage('Remove Unused docker image') {
-		 steps{
-	sh 'docker stop mohanaarush/samplewebapp:latest'
-	sh 'docker rmi mohanaarush/samplewebapp:latest'		 
-	
-	 }
-	 }
+	 
 	 
 	
       stage('Run Docker container on Jenkins Agent') {
