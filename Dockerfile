@@ -1,4 +1,4 @@
-FROM tomcat:latest
+FROM centos:7
 
 LABEL maintainer="Mohan Nithish"
 
