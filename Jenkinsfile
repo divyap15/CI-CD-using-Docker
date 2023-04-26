@@ -35,10 +35,10 @@ pipeline {
 
   stage('Docker Build and Tag') {
            steps {
-		   script{
-             dockerImage = docker.build("mohanaarush/samplewebapp:${env.BUILD_NUMBER}")
-	     dockerImage.tag()
-		   }
+		   
+             sh 'docker build -t samplewebapp:mod .'
+	     sh 'docker tag samplewebapp mohanaarush/samplewebapp:mod'
+		   
           }
         }
 		
@@ -46,15 +46,11 @@ pipeline {
      
   stage('Publish image to Docker Hub') {
           
-            steps {
-		    script{
+	  steps{
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-         dockerImage.push("$BUILD_NUMBER")
-          dockerImage.push('latest')
-		dockerImage.tag("$BUILD_NUMBER")
-          dockerImage.tag('latest')
+         sh  'docker push mohanaarush/samplewebapp:mod'
 	}
-        }
+        
                   
           }
         }
