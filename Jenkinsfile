@@ -19,7 +19,7 @@ pipeline {
 						  """
 			      }
 			    }
- /*stage('checkout') {
+ stage('checkout') {
            steps {
              
                 git branch: 'master', url: 'https://github.com/Aarushmohan/CI-CD-using-Docker.git'
@@ -75,6 +75,6 @@ pipeline {
 	 
 	
 	 
-*/	
+	
  }
 }
