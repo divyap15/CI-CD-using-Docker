@@ -50,9 +50,11 @@ pipeline {
   stage('Publish image to Docker Hub') {
           
             steps {
+		    script{
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
           dockerImage.push()
 		dockerImage.tag()
+	}
         }
                   
           }
