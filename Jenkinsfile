@@ -11,9 +11,7 @@ pipeline {
 		{
 			steps{
 				sh """
-		  docker ps -a \
-		     
-		    | grep mohanaarush/samplewebapp* \
+		  docker  grep mohanaarush/samplewebapp* 
 		    
 		    | xargs -I {} docker rm -f {}
 			  """
