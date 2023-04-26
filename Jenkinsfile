@@ -5,7 +5,13 @@ pipeline {
     {
        maven "maven"
     }
-
+	/*stage('Remove Unused docker image') {
+			      steps{
+				sh 'docker stop mohanaarush/samplewebapp:latest'
+				      sh 'docker rm mohanaarush/samplewebapp:latest'
+			      }
+			    }
+*/
 	stages {
       stage('checkout') {
            steps {
@@ -52,11 +58,7 @@ pipeline {
                   
           }
         }
-	stage('Remove Unused docker image') {
-			      steps{
-				sh "docker rmi $mohanaarush/samplewebapp:$BUILD_NUMBER"
-			      }
-			    }
+	
 	 
 	 
 	 
