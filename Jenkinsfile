@@ -17,11 +17,9 @@ pipeline {
 						    | awk '{print \$1 }' \
 						    | xargs -I {} docker rm -f {}
 						  """
-					      
-				      
 			      }
 			    }
- stage('checkout') {
+ /*stage('checkout') {
            steps {
              
                 git branch: 'master', url: 'https://github.com/Aarushmohan/CI-CD-using-Docker.git'
@@ -77,6 +75,6 @@ pipeline {
 	 
 	
 	 
-	
+*/	
  }
 }
