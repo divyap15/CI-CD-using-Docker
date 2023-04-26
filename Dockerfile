@@ -2,7 +2,7 @@ FROM tomcat:latest
 
 LABEL maintainer="Mohan Nithish"
 
-CMD ["./var/jenkins_home/workspace/last/target/LoginWebApp-1.war /usr/local/tomcat/webapps/", "CPY"]
+ADD ./target/LoginWebApp-1.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
