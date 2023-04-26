@@ -7,7 +7,21 @@ pipeline {
     }
 	
 	stages{
+		stage('remove images')
+		{
+			steps{
+				sh """
+		  docker ps -a \
+		    | awk '{ print \$1,\$2 }' \
+		    | grep mohanaarush/samplewebapp* \
+		    | awk '{print \$1 }' \
+		    | xargs -I {} docker rm -f {}
+			  """
+			}
+		}
+		
  stage('checkout') {
+	 
            steps {
              
                 git branch: 'master', url: 'https://github.com/Aarushmohan/CI-CD-using-Docker.git'
