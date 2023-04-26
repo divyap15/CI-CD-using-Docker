@@ -197,7 +197,7 @@ span.psw {
         <tr>   
     <marquee >
      <h1>
-        WELCOME TO BANGALORE METROPOLITON TRANSPORT CORPORATION
+        WELCOME TO BANGALORE METROPOLITON TRANSPORT 
     </h1>
         </marquee>
         </tr>
