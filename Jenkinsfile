@@ -29,9 +29,10 @@ pipeline {
 
   stage('Docker Build and Tag') {
            steps {
+		   script{
              dockerImage = docker.build("mohanaarush/samplewebapp:${env.BUILD_NUMBER}")
 	     dockerImage.tag()
-          
+		   }
           }
         }
 		
