@@ -10,13 +10,10 @@ pipeline {
 	stages {
 		stage('Remove Unused docker image') {
 			      steps{
-				      script{
-					      if docker ps -a | grep "mohanaarush/samplewebapp*" | awk '{print $1}' | xargs docker rm -f; then 
-					      printf 'cleared\n'
-					      else
-						      print 'error\n'
-					      fi
-				      }
+				      
+					sh ' docker ps -a | grep "mohanaarush/samplewebapp*" | awk '{print $1}' | xargs docker rm -f' 
+					      
+				      
 			      }
 			    }
  stage('checkout') {
