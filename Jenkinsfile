@@ -46,7 +46,8 @@ pipeline {
 	 
 	 stage('Remove Unused docker image') {
 		 steps{
-	sh "docker rmi mohanaarush/samplewebapp:latest"
+	sh 'docker stop mohanaarush/samplewebapp:latest'
+	sh 'docker rmi mohanaarush/samplewebapp:latest'		 
 	
 	 }
 	 }
