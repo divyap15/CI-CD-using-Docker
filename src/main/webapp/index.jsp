@@ -226,7 +226,7 @@ span.psw {
           <td><input type="password" placeholder="Enter Password" name="psw" required></td>
       </tr>
       <tr>
-          <td><button type="submit">Login</button></td>
+          <td><button type="submit"><a href="login.jsp">Login</a></button></td>
           <td><button type="reset">Reset</button></td>
       </tr>
       <tr>
