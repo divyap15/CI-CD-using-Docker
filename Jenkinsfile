@@ -22,7 +22,7 @@ pipeline {
                 sh 'mvn package'             
           }
         }
-
+/*
 	stage('Remove Unused docker image') {
 		 steps{
 	sh 'docker stop mohanaarush/samplewebapp:latest'
@@ -30,7 +30,7 @@ pipeline {
 	
 	 }
 	 }
-        
+  */      
 
   stage('Docker Build and Tag') {
            steps {
