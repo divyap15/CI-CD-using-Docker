@@ -23,18 +23,13 @@ pipeline {
           }
         }
 
-	stage('Remove Unused docker image') {
+	/* stage('Remove Unused docker image') {
 		 steps{
-		 sh """
-		  docker ps -a \
-		    | awk '{ print \$1,\$2 }' \
-		    | grep mohanaarush/samplewebapp:latest \
-		    | awk '{print \$1 }' \
-		    | xargs -I {} docker rm -f {}
-		  """
+		 sh 'docker ps -f name=zookeeper -q | xargs --no-run-if-empty docker container stop'
+                 sh 'docker container ls -a -fname=zookeeper -q | xargs -r docker container rm'
 	
 	 }
-	 }
+	 }*/
     
 
   stage('Docker Build and Tag') {
