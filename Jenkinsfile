@@ -25,12 +25,6 @@ pipeline {
 
 	  
 		
-		stage('execute')
-		{
-			steps{
-				sh 'docker compose up -d'
-			}
-		}
     
 
   stage('Docker Build and Tag') {
