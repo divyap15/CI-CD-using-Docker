@@ -30,8 +30,8 @@ pipeline {
   stage('Docker Build and Tag') {
            steps {
 		   
-             sh 'docker build -t samplewebapp:mod .'
-	     sh 'docker tag samplewebapp mohanaarush/samplewebapp:mod'
+             sh 'docker build -t samplewebapp:latest .'
+	     sh 'docker tag samplewebapp mohanaarush/samplewebapp:latest'
 		   
           }
         }
@@ -42,7 +42,7 @@ pipeline {
           
 	  steps{
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-         sh  'docker push mohanaarush/samplewebapp:mod'
+         sh  'docker push mohanaarush/samplewebapp:latest'
 	}
         
                   
