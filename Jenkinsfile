@@ -29,13 +29,9 @@ pipeline {
 
   stage('Docker Build and Tag') {
            steps {
-              
+             dockerImage = docker.build("mohanaarush/samplewebapp:${env.BUILD_NUMBER}")
+	     dockerImage.tag()
           
-        
-                sh 'docker build -t samplewebapp .' 
-                 sh 'docker tag samplewebapp mohanaarush/samplewebapp:latest'
-                sh 'docker tag samplewebapp mohanaarush/samplewebapp:$BUILD_NUMBER'
-               
           }
         }
 		
@@ -46,8 +42,10 @@ pipeline {
             steps {
 		    script{
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-          dockerImage.push()
-		dockerImage.tag()
+         dockerImage.push("$BUILD_NUMBER")
+          dockerImage.push('latest')
+		dockerImage.tag("$BUILD_NUMBER")
+          dockerImage.tag('latest')
 	}
         }
                   
