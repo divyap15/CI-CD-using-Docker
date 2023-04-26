@@ -30,12 +30,12 @@ pipeline {
   stage('Docker Build and Tag') {
            steps {
               
-          sh'docker build -t  samplewebapp . + ":$BUILD_NUMBER"'
+          
         
-               /* sh 'docker build -t samplewebapp .' 
+                sh 'docker build -t samplewebapp .' 
                  sh 'docker tag samplewebapp mohanaarush/samplewebapp:latest'
                 sh 'docker tag samplewebapp mohanaarush/samplewebapp:$BUILD_NUMBER'
-               */
+               
           }
         }
 		
