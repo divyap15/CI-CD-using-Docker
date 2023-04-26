@@ -25,7 +25,7 @@ pipeline {
 
 	stage('Remove Unused docker image') {
 		 steps{
-			 mohanaarush/samplewebapp:latest.stop()
+			 sh 'mohanaarush/samplewebapp:latest.stop()'
 	
 	 }
 	 }
