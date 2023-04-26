@@ -23,13 +23,12 @@ pipeline {
           }
         }
 
-	 /*stage('Remove Unused docker image') {
+	 stage('Remove Unused docker image') {
 		 steps{
-		sh ' docker stop mohanaarush/samplewebapp:latest'
-			 sh ' docker rmi mohanaarush/
+		sh ' docker stop <CONTAINER_ID> | xargs -I{} docker rm "{}" '
 	
 	 }
-	 }*/
+	 }
     
 
   stage('Docker Build and Tag') {
