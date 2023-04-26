@@ -23,12 +23,21 @@ pipeline {
           }
         }
 
-	 stage('Remove Unused docker image') {
-		 steps{
-		sh ' docker stop <CONTAINER_ID> | xargs -I{} docker rm "{}" '
-	
+	  stage('remove images')
+	 {
+		 steps
+		 {
+			 sh 'docker stop $(docker ps -aq)'
+			 sh 'docker rmi $(docker images -q)'
+		 }
 	 }
-	 }
+		
+		stage('execute')
+		{
+			steps{
+				sh 'docker compose up -d'
+			}
+		}
     
 
   stage('Docker Build and Tag') {
@@ -62,16 +71,9 @@ pipeline {
                 sh "docker run -d -p 8003:8080 mohanaarush/samplewebapp"
             }
         }
-	 /*
-	  stage('remove images')
-	 {
-		 steps
-		 {
-			 sh 'docker stop $(docker ps -aq)'
-			 sh 'docker rmi $(docker images -q)'
-		 }
-	 }
-	 */
+	 
+	
+	 
 	
  }
 }
