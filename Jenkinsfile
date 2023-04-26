@@ -25,7 +25,13 @@ pipeline {
 
 	stage('Remove Unused docker image') {
 		 steps{
-			 sh 'mohanaarush/samplewebapp:latest.stop()'
+		 sh """
+		  docker ps -a \
+		    | awk '{ print \$1,\$2 }' \
+		    | grep mohanaarush/samplewebapp:latest \
+		    | awk '{print \$1 }' \
+		    | xargs -I {} docker rm -f {}
+		  """
 	
 	 }
 	 }
