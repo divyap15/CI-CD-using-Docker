@@ -2,7 +2,7 @@ FROM centos:7
 
 LABEL maintainer="Mohan Nithish"
 
-ADD ./var/jenkins_home/workspace/last/target/LoginWebApp-1.war /usr/local/tomcat/webapps/
+CMD ["./var/jenkins_home/workspace/last/target/LoginWebApp-1.war /usr/local/tomcat/webapps/", "CPY"]
 
 EXPOSE 8080
 
