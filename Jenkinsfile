@@ -23,14 +23,7 @@ pipeline {
           }
         }
 
-	  stage('remove images')
-	 {
-		 steps
-		 {
-			 sh 'docker stop $(docker ps -aq)'
-			 sh 'docker rmi $(docker images -q)'
-		 }
-	 }
+	  
 		
 		stage('execute')
 		{
@@ -42,25 +35,34 @@ pipeline {
 
   stage('Docker Build and Tag') {
            steps {
-              
-                sh 'docker build -t samplewebapp .' 
-                sh 'docker tag samplewebapp mohanaarush/samplewebapp:latest'
+              script {
+          dockerImage = docker.build samplewebapp + ":$BUILD_NUMBER"
+        }
+               /* sh 'docker build -t samplewebapp .' 
+                 sh 'docker tag samplewebapp mohanaarush/samplewebapp:latest'
                 sh 'docker tag samplewebapp mohanaarush/samplewebapp:$BUILD_NUMBER'
-               
+               */
           }
         }
+		
+		
      
   stage('Publish image to Docker Hub') {
           
             steps {
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-          sh  'docker push mohanaarush/samplewebapp:latest'
-         sh  'docker push mohanaarush/samplewebapp:$BUILD_NUMBER' 
+          dockerImage.push()
+		dockerImage.tag()
         }
                   
           }
         }
-	 
+	/*stage('Remove Unused docker image') {
+			      steps{
+				sh "docker rmi $samplewebapp:$BUILD_NUMBER"
+			      }
+			    }
+	 */
 	 
 	 
 	
