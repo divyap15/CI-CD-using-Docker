@@ -51,7 +51,7 @@ pipeline {
   stage('Docker Build and Tag') {
            steps {
 		   script{
-			   dockerImage=docker.build ("samplewebapp")
+			   dockerImage=docker.build ("mohanaarush/samplewebapp:latest")
 			   dockerImage.tag()
              /*sh 'docker build -t samplewebapp:latest .'
 	     sh 'docker tag samplewebapp mohanaarush/samplewebapp:latest'
@@ -65,10 +65,10 @@ pipeline {
   stage('Publish image to Docker Hub') {
           
 	  steps{
-		  script{
+		  
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
          dockerImage.push()
-	}
+	
         
 		  }
           }
