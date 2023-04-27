@@ -62,6 +62,16 @@ pipeline {
                   
           }
         }
+		stage('publish image to nexus')
+		{
+			steps{
+				withNexusRegistry([ credentialsId: "nexus" , url:""])
+				{
+					sh 'docker tag samplewebapp http://10.12.124.82:8081/repository/last/'
+					sh 'docker push samplewebapp http://10.12.124.82:8081/repository/last/'
+				}
+			}
+		}
 	
 	 
 	 
