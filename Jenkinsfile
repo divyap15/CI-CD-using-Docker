@@ -93,7 +93,7 @@ pipeline {
 	*/	
 	stage('Push Docker Images to Nexus Registry'){
 		steps{
-			sh 'docker login -u admin -p admin123 http://10.12.124.82:9000'
+			sh 'docker login -u admin --password-stdin admin123 http://10.12.124.82:8081'
 			sh 'docker tag samplewebapp:latest http://10.12.124.82:9000/db'
 			sh 'docker push http://10.12.124.82:9000/db'
 			
