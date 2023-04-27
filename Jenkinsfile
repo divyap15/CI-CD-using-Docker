@@ -5,6 +5,13 @@ pipeline {
     {
        maven "maven"
     }
+	environment {
+        imageName = "last"
+        registryCredentials = "nexus3"
+        registry = "http://10.12.124.82:8081/repository/last/"
+        dockerImage = ''
+    }
+
 	
 	stages{
 		stage('remove images')
@@ -43,11 +50,14 @@ pipeline {
 
   stage('Docker Build and Tag') {
            steps {
-		   
-             sh 'docker build -t samplewebapp:latest .'
+		   script{
+			   dockerImage=docker.build samplewebapp:latest
+			   dockerImage.tag('latest')
+             /*sh 'docker build -t samplewebapp:latest .'
 	     sh 'docker tag samplewebapp mohanaarush/samplewebapp:latest'
-		   
+		*/   
           }
+	   }
         }
 		
 		
@@ -55,26 +65,45 @@ pipeline {
   stage('Publish image to Docker Hub') {
           
 	  steps{
+		  script{
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-         sh  'docker push mohanaarush/samplewebapp:latest'
+         dockerImage.push('latest')
 	}
         
-                  
+		  }
           }
         }
 		
+		     stage('push the artifacts to nexus')
+	{
+		nexusArtifactUploader(
+		            nexusVersion:"nexus3", 
+                            protocol:"http", 
+                            nexusUrl: "10.12.124.82:8081",
+                            groupId: 'com.test',
+                            version: '0.0.2-SNAPSHOT',
+                            repository:'database',
+                            credentialsId:'nexus' ,
+                            artifacts: [
+                                [artifactId:'Database' ,
+                                classifier: '',
+                                file: 'target/LoginWebApp-1.war',
+                                type: 'war']
+                            ]
+			);
+	}      
+		
 	stage('Push Docker Images to Nexus Registry'){
 		steps{
-	sh 'docker login -u admin -p admin123 http://10.12.124.82:8081/repository/last/'
-	sh 'docker push http://10.12.124.82:8081/repository/last/samplewebapp}'
-	sh 'docker logout http://10.12.124.82:8081/repository/last/'
-	}
-	}
+			script{
+				docker.withRegistry('http://http://10.12.124.82:8081/repository/last/' + registry,registryCredentials )
+						    {
+							    dockerImage.push('latest')
+						    }
+						    }
+						    }
+						    }
 
-	 
-	 
-	 
-	
       stage('Run Docker container on Jenkins Agent') {
              
             steps 
