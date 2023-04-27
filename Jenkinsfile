@@ -52,7 +52,7 @@ pipeline {
            steps {
 		   script{
 			   dockerImage=docker.build samplewebapp:latest
-			   dockerImage.tag('latest')
+			   dockerImage.tag()
              /*sh 'docker build -t samplewebapp:latest .'
 	     sh 'docker tag samplewebapp mohanaarush/samplewebapp:latest'
 		*/   
@@ -67,7 +67,7 @@ pipeline {
 	  steps{
 		  script{
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-         dockerImage.push('latest')
+         dockerImage.push()
 	}
         
 		  }
@@ -100,7 +100,7 @@ pipeline {
 			script{
 				docker.withRegistry('http://http://10.12.124.82:8081/repository/last/' + registry,registryCredentials )
 						    {
-							    dockerImage.push('latest')
+							    dockerImage.push()
 						    }
 						    }
 						    }
