@@ -7,7 +7,7 @@ pipeline {
     }
 	environment {
         imageName = "last"
-        registryCredentials = "nexus3"
+        registryCredentials = "nexus"
         registry = "http://10.12.124.82:8081/repository/last/"
         dockerImage = ''
     }
