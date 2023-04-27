@@ -8,7 +8,7 @@ pipeline {
 	environment {
         imageName = "db"
         registryCredentials = "nexus"
-        registry = "http://10.12.124.82:8081/repository/last/"
+        registry = "http://10.12.124.82:8081/#admin/repository/repositories"
         dockerImage = ''
     }
 
