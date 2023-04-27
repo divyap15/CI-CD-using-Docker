@@ -73,7 +73,7 @@ pipeline {
 		  }
           }
         }
-		
+/*		
     stage('push the artifacts to nexus')
 	{
 		steps{
@@ -94,7 +94,7 @@ pipeline {
 			);
 	}      
 	}
-		
+*/		
 	stage('Push Docker Images to Nexus Registry'){
 		steps{
 			script{
