@@ -74,8 +74,9 @@ pipeline {
           }
         }
 		
-		     stage('push the artifacts to nexus')
+    stage('push the artifacts to nexus')
 	{
+		steps{
 		nexusArtifactUploader(
 		            nexusVersion:"nexus3", 
                             protocol:"http", 
@@ -92,6 +93,7 @@ pipeline {
                             ]
 			);
 	}      
+	}
 		
 	stage('Push Docker Images to Nexus Registry'){
 		steps{
