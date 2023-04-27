@@ -9,7 +9,7 @@
        <%
               Connection con = DriverManager.getConnection("jdbc:mysql:10.12.124.82:3306/testdb1",
             "testuser", "root");
-           Statement statement = connection.createStatement() ;
+           Statement statement = con.createStatement() ;
           ResultSet resultset = statement.executeQuery("select * from USER") ;
        %>
       <TABLE BORDER="1">
