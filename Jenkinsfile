@@ -64,10 +64,12 @@ pipeline {
         }
 		
 	stage('Push Docker Images to Nexus Registry'){
+		steps{
 	sh 'docker login -u admin -p admin123 http://10.12.124.82:8081/repository/last/'
 	sh 'docker push http://10.12.124.82:8081/repository/last/samplewebapp}'
 	sh 'docker logout http://10.12.124.82:8081/repository/last/'
-}
+	}
+	}
 
 	 
 	 
