@@ -7,7 +7,7 @@
        <BODY BGCOLOR="cyan">
        <H1>The View Of Database Table </H1>
        <%
-              Connection con = DriverManager.getConnection("jdbc:mysql:10.12.124.82:3306/testdb1",
+              Connection con = DriverManager.getConnection("jdbc:mysql://10.12.124.82:3306/testdb1",
             "testuser", "root");
            Statement statement = con.createStatement() ;
           ResultSet resultset = statement.executeQuery("select * from USER") ;
