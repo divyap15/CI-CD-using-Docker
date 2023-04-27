@@ -5,12 +5,7 @@ pipeline {
     {
        maven "maven"
     }
-	environment {
-        imageName = "db"
-        registryCredentials = "nexus"
-        registry = "http://10.12.124.82:8081/#admin/repository/repositories"
-        dockerImage = ''
-    }
+	
 
 	
 	stages{
@@ -50,30 +45,30 @@ pipeline {
 
   stage('Docker Build and Tag') {
            steps {
-		   script{
+		   /*script{
 			   dockerImage=docker.build ("mohanaarush/samplewebapp:latest")
-			   dockerImage.tag()
-             /*sh 'docker build -t samplewebapp:latest .'
+			   dockerImage.tag()*/
+             sh 'docker build -t samplewebapp:latest .'
 	     sh 'docker tag samplewebapp mohanaarush/samplewebapp:latest'
-		*/   
+	   
           }
 	   }
-        }
+        
 		
 		
      
   stage('Publish image to Docker Hub') {
           
 	  steps{
-		  script{
+		  
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-         dockerImage.push()
+         sh 'docker push samplewebapp mohanaarush/samplewebapp:latest'
 	}
 	
         
 		  }
           }
-        }
+        
 /*		
     stage('push the artifacts to nexus')
 	{
@@ -98,14 +93,13 @@ pipeline {
 */		
 	stage('Push Docker Images to Nexus Registry'){
 		steps{
-			script{
-				docker.withRegistry( registry,registryCredentials )
-						    {
-							    dockerImage.push()
-						    }
-						    }
-						    }
-						    }
+			sh 'docker login -u admin -p admin123 http://10.12.124.82:8081/repository/last/'
+			sh 'docker push http://10.12.124.82:8081/repository/last/db}'
+			/*
+			sh 'docker rmi $(docker images --filter=reference="NexusDockerRegistryUrl/ImageName*" -q)'
+			*/sh 'docker logout http://10.12.124.82:8081/repository/last/'
+		}
+	}
 
       stage('Run Docker container on Jenkins Agent') {
              
