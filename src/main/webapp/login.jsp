@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*" %>
-<% Class.forName("sun.jdbc.odbc.JdbcOdbcDriver"); %>
+
 <HTML>
        <HEAD>
        <TITLE>The View Of Database Table </TITLE>
