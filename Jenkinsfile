@@ -99,7 +99,7 @@ pipeline {
 	stage('Push Docker Images to Nexus Registry'){
 		steps{
 			script{
-				docker.withRegistry('http://10.12.124.82:8081/repository/last/' + registry,registryCredentials )
+				docker.withRegistry( registry,registryCredentials )
 						    {
 							    dockerImage.push()
 						    }
